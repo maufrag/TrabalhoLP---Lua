@@ -36,7 +36,6 @@ end
 
 
 local lista = {};
-print(101 > 99)
 for i = 1, 10 do
   io.write("Informe um valor\n");
   local valor = io.read();
