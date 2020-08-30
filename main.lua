@@ -17,20 +17,26 @@ end
 function ValidarValorInformado(valor, colecao)
  
   if type(tonumber(valor)) == "number" then
-    VerificarSeValorEstaNaLista(valor, colecao)
+    VerificarSeValorEstaNaLista(valor, colecao);
   end    
 end
 
 function OrdenarLista(colecao)
- table.sort(colecao)
+ table.sort(colecao);
 end
 
 function ExibirSegundoMaiorElemento(colecao)
+  local tamanho = table.getn(colecao);
+
+  if tamanho == 0 then
+    print("Nenhum valor foi informado");
+    return;
+  end
+  
   OrdenarLista(colecao);
 
-  local ultimoIndex = table.getn(colecao);
 
-  print(colecao[ultimoIndex - 1])
+  print(colecao[tamanho - 1])
 end
 
 
