@@ -31,12 +31,12 @@ function ExibirSegundoMaiorElemento(colecao)
   if tamanho == 0 then
     print("Nenhum valor foi informado");
     return;
+  elseif tamanho == 1 then
+    io.write("O array só possui um elemento e seu valor é: " .. colecao[tamanho]);
+  else
+    OrdenarLista(colecao);
+    io.write("O segundo maior elemento do array é: " .. colecao[tamanho - 1])
   end
-  
-  OrdenarLista(colecao);
-
-
-  print(colecao[tamanho - 1])
 end
 
 
